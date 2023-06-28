@@ -1,12 +1,10 @@
-// Get references to the dropdown list and the button
-const colorSelect = document.getElementById('colorSelect');
-const removeColorButton = document.getElementById('removeColorButton');
+//your JS code here. If required.
+var removeColor = document.getElementsByTagName("input")[0];
 
-// Add event listener to the button
-removeColorButton.addEventListener('click', function() {
-  // Get the selected option
-  const selectedOption = colorSelect.options[colorSelect.selectedIndex];
+removeColor.addEventListener("click",remove);
 
-  // Remove the selected option from the dropdown list
-  colorSelect.removeChild(selectedOption);
-});
+function remove() {
+	var colorset = document.getElementById("colorSelect");
+	var selectedIndex = colorset.selectedIndex;
+	colorset.remove(selectedIndex);
+}
